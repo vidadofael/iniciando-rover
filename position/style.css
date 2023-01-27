@@ -1,0 +1,56 @@
+body {
+    background-color: #17181c;
+    color: white;
+    font-family: sans-serif;
+    margin: 0;
+    height: 200vh;
+}
+
+#posicao {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    height: 200px;
+    background-color: #fff;
+    border-radius: 25px;
+    overflow: hidden;
+}
+
+#posicao:hover .pulse {
+    bottom: 0;
+}
+
+
+.pulse {
+    position: absolute; /*isso vai deixar o elemento ser deslocado na tela com outras propriedades descritas abaixo como o top por exeplo*/
+    background: none;
+    border: 2px solid;
+    bottom: -100px; /*isso vai ajudar o hover da posição no comportamento de "sobe e desce"*/
+    left: 85px;
+    color: #ff760c;
+    margin: 0; /*distancia entre o elemento e a borda*/
+    padding: 15px 40px; /*distancia entre a margem do elemento e o conteúdo*/
+    border-radius: 25px;
+    transition: .25s;
+    
+}
+
+
+
+.pulse:hover, pulse:focus {
+    color: #fff;
+    border-color: #f16333;
+    box-shadow: 0 0 0 25px rgba(255, 255, 255, 0);
+    border-radius: 5px;
+    animation: pulsar 1s;
+   
+}
+
+@keyframes pulsar {
+    0% {
+        box-shadow: 0 0 0 0 #ef8f6e;
+        
+    }
+}
+
+
